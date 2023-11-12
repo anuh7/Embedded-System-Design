@@ -1,0 +1,42 @@
+Name     Anuhya ;
+PartNo   00 ;
+Date     08-09-2022 ;
+Revision 01 ;
+Designer Engineer ;
+Company  CUB ;
+Assembly None ;
+Location  ;
+Device   g16v8a ;
+
+/*
+ * Inputs:  define inputs to build simple gates from
+ */
+
+Pin 1 =  A15;					
+Pin 2 =  A14;
+Pin 3 =  A13;
+Pin 4 =  A12;
+Pin 5 =  RD;
+Pin 6 =  PSEN;
+Pin 7 =  WR;				/*input of WR pin*/
+/*
+ * Outputs:  define outputs as active HI levels
+ 
+ */
+
+Pin 13 = READ;
+Pin 14 = CSPERIPH;
+Pin 19 = OE;
+Pin 17 = CE;
+Pin 15 = WE;				/*input of WE pin*/
+
+
+/*
+ * Logic:  examples of simple gates expressed in CUPL
+ */
+
+READ = RD & PSEN;
+CSPERIPH = !(A15 & A14 & A13 & A12);
+OE = PSEN & RD;
+CE = A15; 
+WE = WR;				/*enabling write to memory*/

@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  LAB2_PART22                                                          09/28/2022 16:55:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\LAB2_PART22.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE LAB2_PART22.ASM SET(SMALL) DEBUG PRINT(.\Listings\LAB2_PART22.lst) OBJE
+                      CT(.\Objects\LAB2_PART22.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 758920            1             MOV     TMOD, #20H
+0003 758DFD            2             MOV     TH1, #-3
+0006 759840            3             MOV     SCON, #40H
+0009 D28E              4             SETB    TR1
+000B 759955            5     AGAIN: MOV      SBUF, #'U'
+000E 3099FD            6     HERE: JNB       TI, HERE
+0011 C299              7             CLR     TI
+0013 80F6              8             SJMP    AGAIN
+                       9             END
+A51 MACRO ASSEMBLER  LAB2_PART22                                                          09/28/2022 16:55:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   000BH   A   
+HERE . . . . . . .  C ADDR   000EH   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

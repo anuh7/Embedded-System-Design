@@ -1,0 +1,68 @@
+A51 MACRO ASSEMBLER  LAB2_PART1_2                                                         09/30/2022 17:57:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\lab2_part1_2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE lab2_part1_2.asm SET(SMALL) DEBUG PRINT(.\Listings\lab2_part1_2.lst) OB
+                      JECT(.\Objects\lab2_part1_2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1             ORG     0000H
+0000 802B              2             SJMP    MAIN    
+000B                   3             ORG     0000BH
+000B D295              4             SETB    P1.5
+000D 08                5             INC     R0
+000E C28C              6             CLR     TR0
+0010 209308            7                     JB P1.3, JUMP2          
+0013 758A53            8     JUMP:   MOV TL0, #053H
+0016 758C06            9                     MOV TH0, #06H
+0019 8006             10                     SJMP JUMP3
+001B 758A7E           11     JUMP2:  MOV     TL0, #07EH
+001E 758CCB           12                     MOV TH0, #0CBH
+0021 D28C             13     JUMP3:  SETB    TR0
+0023 B81804           14                     CJNE R0, #024, EXIT
+0026 B291             15                     CPL     P1.1
+0028 7800             16                     MOV R0, #0H
+002A C295             17     EXIT:   CLR     P1.5
+002C 32               18     RETI
+                      19     
+                      20     
+002D 758901           21     MAIN: MOV TMOD, #01H
+0030 758AFB           22     MOV TL0, #0FBH
+0033 758C03           23     MOV TH0, #03H
+0036 75A882           24     START: MOV IE, #82H
+0039 D291             25     SETB    P1.1
+003B D28C             26     SETB    TR0
+003D 7800             27     MOV     R0, #00H
+003F 80FE             28     LOOP: SJMP LOOP
+                      29     END
+                             
+                             
+A51 MACRO ASSEMBLER  LAB2_PART1_2                                                         09/30/2022 17:57:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+EXIT . . . . . . .  C ADDR   002AH   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+JUMP . . . . . . .  C ADDR   0013H   A   
+JUMP2. . . . . . .  C ADDR   001BH   A   
+JUMP3. . . . . . .  C ADDR   0021H   A   
+LOOP . . . . . . .  C ADDR   003FH   A   
+MAIN . . . . . . .  C ADDR   002DH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+START. . . . . . .  C ADDR   0036H   A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

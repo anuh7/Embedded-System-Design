@@ -1,0 +1,28 @@
+# Berkeley PLA format generated using
+#
+# CUPL(WM)        5.0a Serial# 60008009
+# Device          g16v8as  Library DLIB-h-40-2
+# Created         Thu Oct 06 17:48:07 2022
+# Name            Anuhya 
+# Partno          00 
+# Revision        01 
+# Date            08-09-2022 
+# Designer        Engineer 
+# Company         CUB 
+# Assembly        None 
+# Location        
+#
+# Inputs  A12 A13 A14 A15 
+#         CE CSPERIPH OE PSEN 
+#         RD READ WE WR 
+# Outputs CE !CSPERIPH OE READ 
+#         WE 
+.i 12
+.o 5
+.p 5
+---1-------- 1~~~~
+1111-------- ~1~~~
+-------11--- ~~1~~
+-------11--- ~~~1~
+-----------1 ~~~~1
+.end

@@ -1,0 +1,34 @@
+DUNFIELD 8051 ASSEMBLER: DIVISION                                     PAGE: 1
+
+0000                         1                ORG   $000
+0000  74 0B                  2                MOV   A,#0BH
+0002  75 F0 03               3                MOV   B,#03h
+0005  85 F0 22               4                MOV   22H,B
+0008  A9 22                  5                MOV   R1,22H
+000A  F5 20                  6                MOV   20H,A
+000C  33                     7                RLC   A 
+000D  C3                     8                CLR   C
+000E  33                     9                RLC   A
+000F  40 0A                 10                JC    EXP2
+0011  F5 21                 11                MOV   21H,A
+0013  B9 00 0C              12                CJNE   R1,#0H,DIVI
+0016  75 30 01              13                MOV   30H,#01h
+0019  80 1C                 14                SJMP  ENDLOOP
+001B  F5 23                 15  EXP2:         MOV   23H,A
+001D  75 30 02              16                MOV   30H,#02H
+0020  80 15                 17                SJMP  ENDLOOP
+0022  B5 22 04              18  DIVI:         CJNE  A,22H,S
+0025  08                    19                INC   R0
+0026  E4                    20                CLR   A 
+0027  80 07                 21                SJMP  FINISH
+0029  40 05                 22  S:            JC    FINISH
+002B  95 22                 23                SUBB  A,22H
+002D  08                    24                INC   R0
+002E  70 F2                 25                JNZ   DIVI
+0030  88 23                 26  FINISH:       MOV   23H,R0
+0032  F5 24                 27                MOV   24H,A
+0034  75 30 00              28                MOV   30H,#0h
+0037                        29  
+0037                        30  
+0037  80 FE                 31  ENDLOOP:      SJMP	ENDLOOP
+0039                        32   
