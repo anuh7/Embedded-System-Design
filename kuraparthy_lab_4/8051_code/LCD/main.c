@@ -11,8 +11,8 @@
  * This project allows the user to interact with the LCD on the development board. This file initializes the software timer, lcd
  * and enables serial communication at baud rate=9600. It provides a user-interface to interact with the LCD via PC terminal emulator
  * screen which enables the user to write characters or strings onto the LCD. The clock on LCD can also be started and stopped.
-   ---------------------------------------------------------------------------------*/
-
+   ---------------------------------------------------------------------------------*////
+   //////////////////////
 
 /* -------------------------------------------------- */
 //          INCLUDES & DEFINES
